@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class ModifiedAutoPolicyClass {
+    private int accountNumber;
+    private String makeAndModel;
+    private String state;
+
+    public ModifiedAutoPolicyClass(int accountNumber, String makeAndModel, String state){
+        this.accountNumber=accountNumber;
+        this.makeAndModel=makeAndModel;
+        this.state=state;
+    }
+    public void setAccountNumber(int accountNumber){
+        this.accountNumber=accountNumber;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+    public void setMakeAndModel(String makeAndModel){
+        this.makeAndModel=makeAndModel;
+    }
+
+    public String getMakeAndModel() {
+        return makeAndModel;
+    }
+    public void setState(String state){
+
+        if (state.equals("CT") || state.equals("MA") || state.equals("ME") || state.equals("NH") || state.equals("NJ") || state.equals("NY") || state.equals("PA") || state.equals("VT")) {
+            this.state = state;
+
+        } else {
+
+            System.out.println("Invalid state code");
+        }
+    }
+    public String getState(){
+        return state;
+    }
+
+
+
+
+
+}
